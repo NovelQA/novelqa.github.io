@@ -152,7 +152,7 @@ span.line {
     transition: all 0.6s;
 }
 
-#logo-img:hover {
+#logo-img:hover{
     transform: scale(1.4);
 }
 
@@ -240,7 +240,7 @@ span.line {
     width: 100%;
     text-transform: none;
     background-color: #1F7872;
-    border-radius: 50px;
+    border-radius: 50px; 
 }
 
 #button-row-b {
@@ -253,103 +253,17 @@ span.line {
     width: calc(50% - 5px);
 }
 
-.btn-round {
-    width: calc(50% - 5px);
-    height: calc(50% - 5px);
-    /* Add height property with the same value as width */
-    transition: background-color 0.3s;
-    /* Add a smooth transition effect */
-}
+.btn-round {  
+  width: calc(50% - 5px);  
+  height: calc(50% - 5px); /* Add height property with the same value as width */  
+  transition: background-color 0.3s; /* Add a smooth transition effect */  
+}  
 
 
-.btn-b:hover {
-    background-color: #CD6688;
-    /* Change the background color when the cursor is over the button */
-}
+.btn-b:hover {  
+background-color: #CD6688; /* Change the background color when the cursor is over the button */  
+}  
 
 .btn {
     padding: 8px;
-}
-
-
-[data-tooltip]:hover::after {
-    font-variant-caps: normal;
-    content: attr(data-tooltip);
-    /* display: block; */
-    position: absolute;
-    border: 1px solid black;
-    background: #eee;
-    padding: .25em;
-    border-radius: 2px;
-}
-
-.table-wrapper {
-    display: block;
-    max-width: 100%;
-    padding: 0.5rem;
-}
-
-#ex-table,
-#ves-table {
-    display: block;
-    position: relative;
-    max-width: fit-content;
-    overflow-x: auto;
-    /* border: #ddd 2px solid; */
-    border-radius: 4px;
-    margin: 0 auto;
-    /* white-space: nowrap; */
-}
-
-
-#ex-table {
-    counter-reset: tableCounterEX;
-}
-
-#ex-table>tbody>tr:nth-child(2)>.counter-cell::before {
-    content: "🏆" counter(tableCounterEX);
-    counter-increment: tableCounterEX;
-}
-
-#ex-table>tbody>tr:nth-child(3)>.counter-cell::before {
-    content: "🥈" counter(tableCounterEX);
-    counter-increment: tableCounterEX;
-}
-
-#ex-table>tbody>tr:nth-child(4)>.counter-cell::before {
-    content: "🥉" counter(tableCounterEX);
-    counter-increment: tableCounterEX;
-}
-
-#ex-table>tbody>tr>.counter-cell::before {
-    content: counter(tableCounterEX);
-    counter-increment: tableCounterEX;
-}
-
-#ves-table {
-    counter-reset: tableCounterVES;
-}
-
-#ves-table>tbody>tr:nth-child(2)>.counter-cell::before {
-    content: "🏆" counter(tableCounterVES);
-    counter-increment: tableCounterVES;
-}
-
-#ves-table>tbody>tr:nth-child(3)>.counter-cell::before {
-    content: "🥈" counter(tableCounterVES);
-    counter-increment: tableCounterVES;
-}
-
-#ves-table>tbody>tr:nth-child(4)>.counter-cell::before {
-    content: "🥉" counter(tableCounterVES);
-    counter-increment: tableCounterVES;
-}
-
-#ves-table>tbody>tr>.counter-cell::before {
-    content: counter(tableCounterVES);
-    counter-increment: tableCounterVES;
-}
-
-.counter-cell .badge {
-    display: block;
 }
