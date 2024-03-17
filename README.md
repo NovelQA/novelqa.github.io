@@ -21,11 +21,9 @@
 
   **NovelQA** is a benchmark to evaluate the long-text understanding and retrieval ability of LLMs. This dataset is constructed by manually collecting questions and answers about English novels which are above 50,000 words. Moreover, most of the questions are designed to be focusing on either minor details in the novel, or requiring information spanning multiple chapters, which are inherently challenging for LLMs. We welcome submissions with any LLM with long-context abilities!
 
-  Due to the possible unstability of the platform, we also create an [official leaderboard](https://novelqa.github.io/) by incorporating the Codabench leaderboard with mannually checked results. We encourage participants to refer to this leaderboard for your ranking.
+  The rapid advancement of Large Language Models (LLMs) has introduced a new frontier in natural language processing, particularly in understanding and processing long-context information. However, the evaluation of these models' long-context abilities remains a challenge due to the limitations of current benchmarks. To address this gap, we introduce NovelQA, a benchmark specifically designed to test the capabilities of LLMs with extended texts. Constructed from English novels, NovelQA offers a unique blend of complexity, length, and narrative coherence, making it an ideal tool for assessing deep textual understanding in LLMs. 
 
-  The rapid advancement of Large Language Models (LLMs) has introduced a new frontier in natural language processing, particularly in understanding and processing long-context information. However, the evaluation of these models' long-context abilities remains a challenge due to the limitations of current benchmarks. 
-  
-  To address this gap, we introduce NovelQA, a benchmark specifically designed to test the capabilities of LLMs with extended texts. Constructed from English novels, NovelQA offers a unique blend of complexity, length, and narrative coherence, making it an ideal tool for assessing deep textual understanding in LLMs. 
+  We create this [🏆 Leaderboard Website](https://novelqa.github.io/) for presenting the models top scores on NovelQA. We encourage participants to refer to this leaderboard for your ranking.
 
 
 # 📝 Dataset
