@@ -27,12 +27,16 @@
   
   Through this work, we hope to foster a deeper understanding of Open-QA systems, their evaluations, and aid the research community in developing more reliable automatic evaluation tools.
 
+    The work flow of our online benchmark is as follows. 
 
 ```mermaid
 
 graph TD
 
-A --> B[[🤗]]
+    A[[🤗 Huggingface]]  --(Input Data)--> B[[🤖Your Model]]
+    B --(Model output)--> C[[⚖️Codabench]]
+    C --(Accuracy Score)--> D[[🗳️Google Form]]
+    D ----> E[[🏆Leaderboard Website]]
 
 ```
 
