@@ -15,7 +15,7 @@
 - [📜 License](#-license)
 - [📚 Citation](#-citation)
 - [📮 Contact](#-contact)
-- [Acknowledgement](#acknowledgement)
+- [🎨 Website Template](#-website-template)
   
 # 🚀 Introduction
 
@@ -92,6 +92,6 @@ If you use this dataset in your research, please cite it as follows:
 We welcome contributions to improve this dataset! 
 If you have any questions or feedback, please feel free to reach out at wangcunxiang@westlake.edu.cn.
 
-# Acknowledgement
+# 🎨 Website Template
 
 This leaderboard adopts the style of [bird-bench](https://github.com/bird-bench/bird-bench.github.io).
