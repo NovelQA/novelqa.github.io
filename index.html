@@ -129,35 +129,33 @@
               Each data point in our dataset is represented as a dictionary with the following keys:
             </p>
             <pre id="eachcase">
-              "novel title": [
-              {
-                  "ques": question input,
-                  "ops": [
+                {
+                  "Question": The input question,
+                  "Options": [
                       Option A,
                       Option B,
                       Option C,
                       Option D
-                  ]
-              },
-              ...
-              ]
+                  ],
+                  "Complex": "mh",
+                  "Aspect": "times"
+                }
            </pre>
             <p>
               Here is an example of a data point:
             </p>
             <pre id="caseexample">
-              "Ayala's Angel": [
-              {
-                  "ques": "In novel Ayala's Angel, has someone ever screamed in the novel? If so, how many times have they screamed?",
-                  "ops": [
-                      "No, never",
-                      "Yes, 1",
-                      "Yes, 2",
-                      "Yes, 3"
-                  ]
-              },
-              ...
-              ]
+                {
+                  "Question": "How many times has Robert written letters to his sister?",
+                  "Options": [
+                      "11",
+                      "9",
+                      "12",
+                      "10"
+                  ],
+                  "Complex": "mh",
+                  "Aspect": "times"
+                }
             </pre>
           </div>
           <div class="list-group-item" id="Contributers">

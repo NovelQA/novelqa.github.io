@@ -11,61 +11,72 @@
 - [🚀 Introduction](#-introduction)
 - [📝 Dataset](#-dataset)
   - [Data Description](#data-description)
-  - [Data Scale](#data-scale)
 - [🏆 Evaluation \& Submission](#-evaluation--submission)
 - [📜 License](#-license)
 - [📚 Citation](#-citation)
-  - [📮 Contact](#-contact)
-  - [Acknowledgement](#acknowledgement)
+- [📮 Contact](#-contact)
+- [Acknowledgement](#acknowledgement)
   
 # 🚀 Introduction
-  Welcome to our GitHub repository for the "Evaluating Open-QA Evaluation" [paper](https://arxiv.org/abs/2305.12421), a comprehensive study on the evaluating of evaluation methods in Open Question Answering (Open-QA) systems.
+
+  **NovelQA** is a benchmark to evaluate the long-text understanding and retrieval ability of LLMs. This dataset is constructed by manually collecting questions and answers about English novels which are above 50,000 words. Moreover, most of the questions are designed to be focusing on either minor details in the novel, or requiring information spanning multiple chapters, which are inherently challenging for LLMs. We welcome submissions with any LLM with long-context abilities!
+
+  Due to the possible unstability of the platform, we also create an [official leaderboard](https://novelqa.github.io/) by incorporating the Codabench leaderboard with mannually checked results. We encourage participants to refer to this leaderboard for your ranking.
+
+  The rapid advancement of Large Language Models (LLMs) has introduced a new frontier in natural language processing, particularly in understanding and processing long-context information. However, the evaluation of these models' long-context abilities remains a challenge due to the limitations of current benchmarks. 
   
-  Open-QA systems, which generate answers to questions with a vast range of possible topics, have become an increasingly significant research field in recent years. However, accurately evaluating these systems remains challenging, and currently lacks robust, reliable methods.
-  
-  In response to this, we introduce the QA Evaluation task (QA-Eval), a new task that rigorously tests various evaluation methods for their ability to accurately assess the relevance of machine-generated answers to a set of gold standard answers within an Open-QA context. This task requires the evaluating method to discern whether a machine-generated answer aligns with the gold standard answer, with performance evaluated against human-annotated results.
-  
-  We sourced our data from the test sets of two well-established QA datasets, Natural Questions (NQ) and TriviaQA. We ask several representative models, including FiD, ChatGPT-(3.5/4), GPT-3.5 and BingChat, to answer the questions. We then manually annotated the correctness of each question-answer pair.
-  
-  Through this work, we hope to foster a deeper understanding of Open-QA systems, their evaluations, and aid the research community in developing more reliable automatic evaluation tools.
-  
+  To address this gap, we introduce NovelQA, a benchmark specifically designed to test the capabilities of LLMs with extended texts. Constructed from English novels, NovelQA offers a unique blend of complexity, length, and narrative coherence, making it an ideal tool for assessing deep textual understanding in LLMs. 
+
+
 # 📝 Dataset
   ## Data Description
-  
+
   Each data point in our dataset is represented as a dictionary with the following keys:
 ```
-
+    {
+        "Question": The input question,
+        "Options": [
+            Option A,
+            Option B,
+            Option C,
+            Option D
+        ],
+        "Complex": "mh",
+        "Aspect": "times"
+    }
 ```
   Here is an example of a data point:
 ```json
-
+    {
+        "Question": "How many times has Robert written letters to his sister?",
+        "Options": [
+            "11",
+            "9",
+            "12",
+            "10"
+        ],
+        "Complex": "mh",
+        "Aspect": "times"
+    }
 ```
-  ## Data Scale
-  The scale of our dataset is detailed in the table below:
-  
- |models | Natural Questions| TriviaQA |
- |------------------------------|------------------------------|------------------------------|
- |DPR+FiD |3610|2000|
- |GPT-3.5 |3610|2000|
- |ChatGPT-3.5 |3610|2000|
- |ChatGPT-4 |3610|2000|
- |Bing Chat |3610|2000|
  
 # 🏆 Evaluation & Submission
 
-
-  The work flow of our online benchmark is as follows. 
+  Due to confidentiality considerations, the submission procedure is deployed through multiple steps on several platforms. An overview of the submission is shown as the following flowchart.
 
 ```mermaid
-
 graph LR
-
     A[[🤗 Huggingface]]  --(Input Data)--> B[[🤖Your Model]]
     B --(Model output)--> C[[⚖️Codabench]]
     C --(Accuracy Score)--> D[[🗳️Google Form]]
     D ----> E[[🏆Leaderboard Website]]
-
 ```
+
+  Our input data (including novel, question and options) is opensourced on the [🤗 Huggingface]() platform. Participants who expect to evaluate their model are expected to download the data through Huggingface first. You may either execute the generative subtask with only the novel and quetion, or executing the multichoice subtask by inputing the novel, question and the options. Warning: The input data are only for internal evaluation use. Please do not publicly spread the input data online. The competition hosts are not responsible for any possible violation of novel copyright caused by the participants' spreading the input data publicly online.
+
+  After inputing the data and obtaining the model output, you are expected to submit your model output to the [⚖️ Codabench]() platform for evaluation. Such a procedure is set for the purpose of perserving the confidentiality of the gold answers. The Codabench platform automatically runs evaluation on your result, and generates the accuracy score within an average of 5 minutes. If your submission fails or your evaluation is obviously above average, you may email us with the results to have us manually run the evaluation for you. For details about the Codabench platform and the evaluation procedure, see our instructions in our Codabench page.
+
+  Your accuracy score are further expected to submit to us through the [🗳️ Google Form]() if you evluate your results through Codabench to have us update it on our [🏆 Leaderboard](). Our leaderboard presents the Top 7 models on the two subtasks seperately.
 
 # 📜 License
 
@@ -77,12 +88,10 @@ If you use this dataset in your research, please cite it as follows:
 ```bibtex
 
 ```
-## 📮 Contact
+# 📮 Contact
 We welcome contributions to improve this dataset! 
 If you have any questions or feedback, please feel free to reach out at wangcunxiang@westlake.edu.cn.
 
-## Acknowledgement
+# Acknowledgement
 
 This leaderboard adopts the style of [bird-bench](https://github.com/bird-bench/bird-bench.github.io).
-
-[Official Site](https://novelqa.github.io/)
