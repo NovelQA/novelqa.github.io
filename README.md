@@ -12,6 +12,7 @@
 - [📝 Dataset](#-dataset)
   - [Data Description](#data-description)
   - [Data Scale](#data-scale)
+- [🏆 Evaluation \& Submission](#-evaluation--submission)
 - [📜 License](#-license)
 - [📚 Citation](#-citation)
   - [📮 Contact](#-contact)
@@ -26,21 +27,6 @@
   We sourced our data from the test sets of two well-established QA datasets, Natural Questions (NQ) and TriviaQA. We ask several representative models, including FiD, ChatGPT-(3.5/4), GPT-3.5 and BingChat, to answer the questions. We then manually annotated the correctness of each question-answer pair.
   
   Through this work, we hope to foster a deeper understanding of Open-QA systems, their evaluations, and aid the research community in developing more reliable automatic evaluation tools.
-
-
-  The work flow of our online benchmark is as follows. 
-
-```mermaid
-
-graph LR
-
-    A[[🤗 Huggingface]]  --(Input Data)--> B[[🤖Your Model]]
-    B --(Model output)--> C[[⚖️Codabench]]
-    C --(Accuracy Score)--> D[[🗳️Google Form]]
-    D ----> E[[🏆Leaderboard Website]]
-
-```
-
   
 # 📝 Dataset
   ## Data Description
@@ -55,21 +41,7 @@ graph LR
 ```
   Here is an example of a data point:
 ```json
-{
-  "question": "who got the first nobel prize in physics",
-  "golden_answer": "Wilhelm Conrad R\u00f6ntgen",
-  "answer_fid": "Wilhelm R\u00f6ntgen",
-  "judge_fid": true,
-  "answer_gpt35": "The first Nobel Prize in Physics was awarded to Wilhelm R\u00f6ntgen in 1901.",
-  "judge_gpt35": true,
-  "answer_chatgpt": "The first Nobel Prize in Physics was awarded in 1901 to Wilhelm R\u00f6ntgen for his discovery of X-rays.",
-  "judge_chatgpt": true,
-  "answer_gpt4": "The first Nobel Prize in Physics was awarded in 1901 to Wilhelm Conrad R\u00f6ntgen, a German physicist. He received the prize for his discovery of X-rays, a groundbreaking achievement that revolutionized the fields of medicine, physics, and chemistry.",
-  "judge_gpt4": true,
-  "answer_newbing": "According to Wikipedia,Wilhelm Conrad R\u00f6ntgen of Germany got the first Nobel Prize in Physics in 1901 for his discovery of X-rays.  He received 150,782 SEK (Swedish krona) as the prize money.",
-  "judge_newbing": true,
-  "improper": false
-}
+
 ```
   ## Data Scale
   The scale of our dataset is detailed in the table below:
@@ -82,6 +54,38 @@ graph LR
  |ChatGPT-4 |3610|2000|
  |Bing Chat |3610|2000|
  
+
+# 🏆 Evaluation & Submission
+
+
+  The work flow of our online benchmark is as follows. 
+
+```mermaid
+
+graph LR
+    subgraph SG1 [" "]
+    direction TB
+    A[[🤗 Huggingface]] --> B[[🤖Your Model]]
+    end
+    
+    subgraph SG2 [" "]
+    direction TB
+    B --> C[[⚖️Codabench]]
+    end
+    
+    subgraph SG3 [" "]
+    direction TB
+    C --> D[[🗳️Google Form]]
+    end
+
+    subgraph SG4 [" "]
+    direction TB
+    D ----> E[[🏆Leaderboard Website]]
+    end
+
+```
+
+
 # 📜 License
 
 This dataset is released under the [Apache-2.0 License](LICENSE).
@@ -101,5 +105,3 @@ If you have any questions or feedback, please feel free to reach out at wangcunx
 This leaderboard adopts the style of [bird-bench](https://github.com/bird-bench/bird-bench.github.io).
 
 [Official Site](https://novelqa.github.io/)
-
-![Workflow](asset/flowchart.png)
