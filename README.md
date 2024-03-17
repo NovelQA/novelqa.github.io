@@ -63,25 +63,11 @@
 ```mermaid
 
 graph LR
-    subgraph SG1 [" "]
-    direction TB
-    A[[🤗 Huggingface]] --> B[[🤖Your Model]]
-    end
-    
-    subgraph SG2 [" "]
-    direction TB
-    B --> C[[⚖️Codabench]]
-    end
-    
-    subgraph SG3 [" "]
-    direction TB
-    C --> D[[🗳️Google Form]]
-    end
 
-    subgraph SG4 [" "]
-    direction TB
-    D ----> E[[🏆Leaderboard Website]]
-    end
+    A[🤗 Huggingface]  --(Input Data)--> B[🤖Your Model]
+    B --(Model output)--> C[⚖️Codabench]
+    C --(Accuracy Score)--> D[🗳️Google Form]
+    D ----> E[🏆Leaderboard Website]
 
 ```
 
