@@ -11,7 +11,7 @@
 - [🚀 Introduction](#-introduction)
 - [📝 Dataset](#-dataset)
   - [Data Description](#data-description)
-- [🏆 Evaluation \& Submission](#-evaluation--submission)
+- [🏆 Evaluation \& Submission Procedure](#-evaluation--submission-procedure)
 - [📜 License](#-license)
 - [📚 Citation](#-citation)
 - [📮 Contact](#-contact)
@@ -57,8 +57,9 @@
         "Aspect": "times"
     }
 ```
- 
-# 🏆 Evaluation & Submission
+Currently we are only open-sourcing the fields above, without including the `Evidences` field in the case of answer leaking. However, individuals in need of the `Evidences` field for analysis can contact us (see [📮 Contact](#-contact)) to obtain it.
+
+# 🏆 Evaluation & Submission Procedure
 
   Due to confidentiality considerations, the submission procedure is deployed through multiple steps on several platforms. An overview of the submission is shown in the following flowchart.
 
@@ -94,8 +95,11 @@ If you use this dataset in your research, please cite it as follows:
 }
 ```
 # 📮 Contact
-We welcome contributions to improve this dataset! 
-If you have any questions or feedback, please feel free to reach out at wangcunxiang@westlake.edu.cn.
+
+If you have any questions or feedback, please feel free to reach out wangcunxiang@westlake.edu.cn or ruoxining@outlook.com. 
+
+We welcome suggestions and contributions in any aspects to improve this dataset. 
+
 
 # 🎨 Website Template
 
