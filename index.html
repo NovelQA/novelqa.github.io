@@ -129,38 +129,46 @@
               Each data point in our dataset is represented as a dictionary with the following keys:
             </p>
             <pre id="eachcase">
+[
 {
-  "Question": The input question,
-  "Options": [
-      Option A,
-      Option B,
-      Option C,
-      Option D
-  ],
-  "Complex": "mh",
-  "Aspect": "times"
-}
+    "QID": the QID which remains unchanged for tracking updates (only happen if necessary),
+    "Aspect": the question classification in 'aspect', e.g., "times",
+    "Complexity": the question classification in complexity, e.g., "mh",
+    "Question": the input question,
+    "Options": {
+        "A": Option A,
+        "B": Option B,
+        "C": Option C (not applicable in several yes/no questions),
+        "D": Option D (not application in several yes/no questions)
+    },
+},
+...
+]
            </pre>
             <p>
               Here is an example of a data point:
             </p>
             <pre id="caseexample">
+[
 {
-  "Question": "How many times has Robert written letters to his sister?",
-  "Options": [
-      "11",
-      "9",
-      "12",
-      "10"
-  ],
-  "Complex": "mh",
-  "Aspect": "times"
-}
+    "QID": "Q0148",
+    "Aspect": "times",
+    "Complex": "mh",
+    "Question": "How many times has Robert written letters to his sister?",
+    "Options": {
+        "A": "11",
+        "B": "9",
+        "C": "12",
+        "D": "10"
+    },
+},
+...
+]
             </pre>
           </div>
           <div class="list-group-item" id="Contributers">
             <h4>Contributors</h4>
-            <p>Cunxiang Wang, Ruoxi Ning, Boqi Pan, Tonghui Wu, Qipeng Guo, Cheng Deng, Guangsheng Bao, Qian Wang, and Yue Zhang</p>
+            <p>Cunxiang Wang*, Ruoxi Ning*, Boqi Pan, Tonghui Wu, Qipeng Guo, Cheng Deng, Guangsheng Bao, Qian Wang, and Yue Zhang</p>
           </div> 
           <div class="list-group-item" id="Lisence">
             <h4>License</h4>

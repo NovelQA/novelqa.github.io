@@ -29,33 +29,42 @@
 # 📝 Dataset
   ## Data Description
 
-  Each data point in our dataset is represented as a dictionary with the following keys:
+  The dataset comprises two parts, the txt book and the json QA tuples. Each json file has a corresponding txt file with the same filename (as the novel title). 
+  Each json file comprises a `list` of `dict`s, where a `dict` has a basic structure as follows.
 ```
+[
     {
-        "Question": The input question,
-        "Options": [
-            Option A,
-            Option B,
-            Option C,
-            Option D
-        ],
-        "Complex": "mh",
-        "Aspect": "times"
-    }
+        "QID": the QID which remains unchanged for tracking updates (only happen if necessary),
+        "Aspect": the question classification in 'aspect', e.g., "times",
+        "Complexity": the question classification in complexity, e.g., "mh",
+        "Question": the input question,
+        "Options": {
+            "A": Option A,
+            "B": Option B,
+            "C": Option C (not applicable in several yes/no questions),
+            "D": Option D (not application in several yes/no questions)
+        },
+    },
+    ...
+]
 ```
-  Here is an example of a data point:
+  Here is an example of a real data point, selected from the demonstration file `Frankensstein`.
 ```json
+[
     {
-        "Question": "How many times has Robert written letters to his sister?",
-        "Options": [
-            "11",
-            "9",
-            "12",
-            "10"
-        ],
+        "QID": "Q0148",
+        "Aspect": "times",
         "Complex": "mh",
-        "Aspect": "times"
-    }
+        "Question": "How many times has Robert written letters to his sister?",
+        "Options": {
+            "A": "11",
+            "B": "9",
+            "C": "12",
+            "D": "10"
+        },
+    },
+    ...
+]
 ```
 Currently we are only open-sourcing the fields above, without including the `Evidences` field in the case of answer leaking. However, individuals in need of the `Evidences` field for analysis can contact us (see [📮 Contact](#-contact)) to obtain it.
 
