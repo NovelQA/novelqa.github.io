@@ -94,13 +94,14 @@ This dataset is released under the [Apache-2.0 License](LICENSE).
 
 If you use this dataset in your research, please cite it as follows:
 ```bibtex
-@misc{wang2024novelqa,
-      title={NovelQA: A Benchmark for Long-Range Novel Question Answering}, 
-      author={Cunxiang Wang and Ruoxi Ning and Boqi Pan and Tonghui Wu and Qipeng Guo and Cheng Deng and Guangsheng Bao and Qian Wang and Yue Zhang},
+@misc{wang2024novelqabenchmarkingquestionanswering,
+      title={NovelQA: Benchmarking Question Answering on Documents Exceeding 200K Tokens}, 
+      author={Cunxiang Wang and Ruoxi Ning and Boqi Pan and Tonghui Wu and Qipeng Guo and Cheng Deng and Guangsheng Bao and Xiangkun Hu and Zheng Zhang and Qian Wang and Yue Zhang},
       year={2024},
       eprint={2403.12766},
       archivePrefix={arXiv},
-      primaryClass={cs.CL}
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2403.12766}, 
 }
 ```
 # 📮 Contact
