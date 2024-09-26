@@ -66,7 +66,7 @@
     ...
 ]
 ```
-Currently we are only open-sourcing the fields above, without including the `Evidences` field in the case of answer leaking. However, individuals in need of the `Evidences` field for analysis can contact us (see [📮 Contact](#-contact)) to obtain it.
+
 
 # 🏆 Evaluation & Submission Procedure
 
@@ -80,7 +80,9 @@ graph LR
     D ----> E[[🏆Leaderboard Website]]
 ```
 
-  Our input data (including the novel, question, and options) is open-source on the [🤗 Huggingface](https://huggingface.co/datasets/NovelQA/NovelQA) platform. Participants who expect to evaluate their model are expected to download the data through Huggingface first. You may either execute the generative subtask with only the novel and quetion, or execute the multichoice subtask by inputting the novel, question, and options. Warning: The input data are only for internal evaluation use. Please do not publicly spread the input data online. The competition hosts are not responsible for any possible violation of novel copyright caused by the participants' spreading the input data publicly online.
+  Our input data (including the novel, question, and options) is open-source on the [🤗 Huggingface](https://huggingface.co/datasets/NovelQA/NovelQA) platform. Participants who expect to evaluate their model are expected to download the data through Huggingface first. You may either execute the generative subtask with only the novel and quetion, or execute the multichoice subtask by inputting the novel, question, and options. Currently we are only open-sourcing the input data, without including the `Golden` and `Evidences` in the case of answer leaking. However, individuals in need of the `Golden` and`Evidences` for analysis can contact us (see [📮 Contact](#-contact)) to obtain it.
+  
+Warning: The input data are only for internal evaluation use. Please do not publicly spread the input data online. The competition hosts are not responsible for any possible violation of novel copyright caused by the participants' spreading the input data publicly online.
 
   After inputting the data and obtaining the model output, you are expected to submit your model output to the [⚖️ Codabench](https://www.codabench.org/competitions/2727/#/participate-tab) platform for evaluation. Such a procedure is set for the purpose of preserving the confidentiality of the gold answers. The Codabench platform automatically runs evaluation on your result, and generates the accuracy score within an average of 5 minutes. If your submission fails or your evaluation is obviously above average, you may email us with the results to have us manually run the evaluation for you. For details about the Codabench platform and the evaluation procedure, see our instructions in our Codabench page.
 
