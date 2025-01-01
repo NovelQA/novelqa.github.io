@@ -127,11 +127,11 @@ span.line {
 }
 
 .data-paragraph .paragraph-title {
-    color: #888888;
+    color: #00498f;
 }
 
 .data-paragraph .supfact {
-    background: #bbffcc;
+    background: #f18b1c;
     border-radius: 3px;
     color: inherit;
     transition: background-color .2s;
