@@ -24,7 +24,7 @@ body {
 }
 
 a {
-    color: #17a2b8;
+    color: #1e6bb8;
 }
 
 .list-group-item p {
@@ -43,7 +43,8 @@ a {
     font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
     font-weight: 300;
     font-size: 1.25rem;
-    background: #eee;
+    background: #dbeafe;
+    color: #1e3a5f;
 }
 
 .badge {
@@ -53,8 +54,9 @@ a {
 
 code,
 pre {
-    background: #eee;
+    background: #f0f6ff;
     padding: 1px 3px;
+    border: 1px solid #d0e4f7;
 }
 
 .table td,
@@ -142,7 +144,7 @@ span.line {
 }
 
 #bird-title {
-    color: #9de2dd
+    color: #c8e8ff
 }
 
 #logo-img {
@@ -167,8 +169,8 @@ span.line {
 }
 
 #paper {
-    background-color: #34314c;
-    border-color: #34314c;
+    background-color: #1e5fa8;
+    border-color: #1e5fa8;
 }
 
 .column-img {
@@ -180,7 +182,7 @@ span.line {
 }
 
 .dataset-btn {
-    background-color: #1F7872;
+    background-color: #1e5fa8;
     min-width: 50% !important;
 }
 
@@ -211,8 +213,7 @@ span.line {
 }
 
 #header-color {
-    /* background-color: #7C499D; */
-    background-color: #53595F;
+    background: linear-gradient(135deg, #1a3a6b 0%, #2355a0 60%, #1e6bb8 100%);
 }
 
 
@@ -231,7 +232,27 @@ span.line {
     font-weight: 400;
     width: 100%;
     text-transform: none;
-    background-color: #34314c;
+    background-color: #1e5fa8;
+    border-color: #1a4f90;
+}
+
+.btn-a:hover {
+    background-color: #1a4f90;
+    color: #fff;
+}
+
+.btn-hf {
+    color: #1a2d4a;
+    font-weight: 500;
+    width: 100%;
+    text-transform: none;
+    background-color: #FFD21E;
+    border-color: #e6bc00;
+}
+
+.btn-hf:hover {
+    background-color: #e6bc00;
+    color: #1a2d4a;
 }
 
 .btn-b {
@@ -239,8 +260,9 @@ span.line {
     font-weight: 400;
     width: 100%;
     text-transform: none;
-    background-color: #1F7872;
-    border-radius: 50px; 
+    background-color: #1e6bb8;
+    border-color: #1a5a9e;
+    border-radius: 50px;
 }
 
 #button-row-b {
@@ -260,9 +282,10 @@ span.line {
 }  
 
 
-.btn-b:hover {  
-background-color: #CD6688; /* Change the background color when the cursor is over the button */  
-}  
+.btn-b:hover {
+    background-color: #1a5a9e;
+    color: #fff;
+}
 
 .btn {
     padding: 8px;
